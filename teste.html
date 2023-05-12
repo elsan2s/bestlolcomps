@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Composições do League of Legends</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      const sections = document.querySelectorAll('section');
+
+      sections.forEach(section => {
+        const ul = section.querySelector('ul');
+        const lis = ul.children;
+
+        for (let li of lis) {
+          const role = li.className;
+          const img = document.createElement('img');
+
+          img.src = `https://cdn.communitydragon.org/latest/champion/${li.textContent.toLowerCase().replace(/\s/g, '')}/square`;
+          img.alt = `${li.textContent} Icon`;
+          img.title = li.textContent;
+
+          section.appendChild(img);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>As melhores composições do League of Legends</h1>
+    </header>
+
+    <section id="hard-engage">
+      <h2>Hard Engage</h2>
+      <p>Uma composição de hard engage é focada em iniciar lutas e controlar o campo de batalha. Geralmente, possui campeões com habilidades de crowd control fortes e uma alta capacidade de engajar inimigos.</p>
+
+      <ul>
+        <li class="top">Top: Ornn</li>
+        <li class="jungle">Jungle: Sejuani</li>
+        <li class="mid">Mid: Galio</li>
+        <li class="adc">ADC: Jinx</li>
+        <li class="support">Support: Alistar</li>
+      </ul>
+    </section>
+
+    <section id="poke">
+      <h2>Poke</h2>
+      <p>Uma composição de poke é focada em manter os inimigos afastados e causar dano a distância. Geralmente, possui campeões com habilidades de dano em área e mobilidade para desviar de ataques inimigos.</p>
+
+      <ul>
+        <li class="top">Top: Jayce</li>
+        <li class="jungle">Jungle: Nidalee</li>
+        <li class="mid">Mid: Ziggs</li>
+        <li class="adc">ADC: Ezreal</li>
+        <li class="support">Support: Lux</li>
+      </ul>
+    </section>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  li.top {
+    color: #FF5733;
+  }
+
+  li.jungle {
+    color: #2ECC71;
+  }
+
+  li.mid {
+    color: #3498DB;
+  }
+
+  li.adc {
+    color: #F1C40F;
+  }
+
+  li.support {
+    color: #8E44AD;
+ 
